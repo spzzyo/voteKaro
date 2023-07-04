@@ -16,7 +16,7 @@ import Team from "./scenes/Team/index.jsx";
 
 function SidebarWrapper() {
   const location = useLocation();
-  const isSidebar = location.pathname !== '/signup' && location.pathname !== '/signin';
+  const isSidebar = location.pathname !== '/signup' && location.pathname !== '/signin' && location.pathname !== '/';
 
   return isSidebar ? <Sidebar /> : null;
 }
