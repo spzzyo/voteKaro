@@ -7,7 +7,7 @@ import AuthContext from '../../AuthContext';
 
 
 const SignInPage = () => {
-  const paperStyle={padding:20, height:'70vh', width:280, margin: '20px auto'}
+  const paperStyle={padding:20, height:'70vh', width:400, margin: '20px auto'}
   const avatarStyle={backgroundColor:'#18c588'}
   const buttonStyle={margin:'8px 0'}
 

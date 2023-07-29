@@ -52,8 +52,10 @@ export const AuthProvider = ({children}) => {
 
         if(response.status===200){
             setAuthTokens(data)
-            setUser(jwt_decode(data.access))
-            localStorage.setItem('authTokens', JSON.stringify(data))
+            const decodedToken = jwt_decode(data.access);
+            setUser(decodedToken);
+            localStorage.setItem('authTokens', JSON.stringify(data));
+            localStorage.setItem('userId', decodedToken.user_id);
             navigate('/dashboard')
         }else{
             alert('Something Went Wrong')

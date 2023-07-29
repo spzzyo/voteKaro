@@ -20,6 +20,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('app.login_api.urls')),
     path('view/',include('api.urls')),
-    # path('', include('app.urls', namespace='app')),
-    # path('api/', include('api.urls', namespace='api')),
+    path('vote/', include('vote_api.urls')),
+    path('', include('vote_api.urls'))
 ]

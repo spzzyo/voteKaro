@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ProSidebar, Menu, MenuItem } from "react-pro-sidebar";
 import { Box, IconButton, Typography, useTheme } from "@mui/material";
 import { Link } from "react-router-dom";
@@ -17,6 +17,7 @@ import PieChartOutlineOutlinedIcon from "@mui/icons-material/PieChartOutlineOutl
 import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
+import HowToRegIcon from '@mui/icons-material/HowToReg';
 
 const Item = ({ title, to, icon, selected, setSelected }) => {
   const theme = useTheme();
@@ -36,20 +37,36 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
   );
 };
 
+
+
 const Sidebar = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [selected, setSelected] = useState("Dashboard");
+  const [userId, setUserId] = useState(null);
+
+  useEffect(() => {
+    const storedUserId = localStorage.getItem('userId');
+    if (storedUserId) {
+      setUserId(storedUserId);
+      
+    }
+  }, []);
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    
+    <Box sx={{ display: 'flex', position : "sticky"}}>
     <Box
       sx={{
-        position: 'sticky',
-        top: 0,
-        height: '100vh',
-        overflowY: 'scroll',
+        // position: 'sticky',
+        // top: 0,
+        // height: '100%',
+
+          position: "sticky",
+          top: 0,
+          height: "100vh",
+          overflowY: "auto",
              
         
         "& .pro-sidebar-inner": {
@@ -69,14 +86,17 @@ const Sidebar = () => {
         },
       }}
     >
-      <ProSidebar collapsed={isCollapsed}>
+     
+      <ProSidebar collapsed={isCollapsed} >
+        
         <Menu iconShape="square">
+        
           {/* LOGO AND MENU ICON */}
           <MenuItem
             onClick={() => setIsCollapsed(!isCollapsed)}
             icon={isCollapsed ? <MenuOutlinedIcon /> : undefined}
             style={{
-              margin: "10px 0 20px 0",
+              margin: "1px 0 10px 0",
               color: colors.grey[100],
             }}
           >
@@ -85,11 +105,8 @@ const Sidebar = () => {
                 display="flex"
                 justifyContent="space-between"
                 alignItems="center"
-                ml="15px"
+                ml="5px"
               >
-                <Typography variant="h3" color={colors.grey[100]}>
-                  ADMINIS
-                </Typography>
                 <IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
                   <MenuOutlinedIcon />
                 </IconButton>
@@ -99,32 +116,22 @@ const Sidebar = () => {
 
           {!isCollapsed && (
             <Box mb="25px">
-              <Box display="flex" justifyContent="center" alignItems="center">
-                <img
-                  alt="profile-user"
-                  width="50px"
-                  height="50px"
-                  src={`../../assets/user.png`}
-                  style={{ cursor: "pointer", borderRadius: "50%" }}
-                />
-              </Box>
               <Box textAlign="center">
                 <Typography
-                  variant="h2"
+                  variant="h4"
                   color={colors.grey[100]}
                   fontWeight="bold"
                   sx={{ m: "10px 0 0 0" }}
                 >
-                  ADMIN
+                  VOTEKARO
                 </Typography>
-                <Typography variant="h5" color={colors.greenAccent[500]}>
-                  Admin
-                </Typography>
+                
               </Box>
             </Box>
           )}
 
-          <Box Box paddingLeft={isCollapsed ? undefined : "10%"}>
+          {userId === '1' ?(
+          <Box Box paddingLeft={isCollapsed ? undefined : "5%"}>
             <Item
               title="Dashboard"
               to="/dashboard"
@@ -145,14 +152,14 @@ const Sidebar = () => {
             
             <Item
               title="Applied Candidates"
-              to="/team"
+              to="/applied_candidates"
               icon={<PeopleOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
             <Item
               title="Selected Candidates"
-              to="/contacts"
+              to="/selected_candidates"
               icon={<ContactsOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
@@ -166,8 +173,8 @@ const Sidebar = () => {
               Pages
             </Typography>
             <Item
-              title="Profile Form"
-              to="/form"
+              title="Apply for a Position"
+              to="/hi"
               icon={<PersonOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
@@ -186,7 +193,6 @@ const Sidebar = () => {
               selected={selected}
               setSelected={setSelected}
             /> 
-            
 
             <Typography
               variant="h6"
@@ -210,27 +216,64 @@ const Sidebar = () => {
               setSelected={setSelected}
             />
             </Box>
-
-            {/*
+          ):(
+            <Box Box paddingLeft={isCollapsed ? undefined : "5%"}>
             <Item
-              title="Line Chart"
-              to="/line"
-              icon={<TimelineOutlinedIcon />}
+              title="Dashboard"
+              to="/dashboard"
+              icon={<HomeOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+            {/* <Item
+              title="Know Your Candidates"
+              to="/candidates"
+              icon={<PeopleOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />  //For after the selection phase is over*/}   
+             
+
+            <Item
+              title="Vote Now"
+              to="/vote"
+              icon={< HowToRegIcon/>}
+              selected={selected}
+              setSelected={setSelected}
+            />
+
+            <Item
+              title="Apply for a Position"
+              to="/details"
+              icon={<PersonOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+
+            <Item
+              title="Calendar"
+              to="/calendar"
+              icon={<CalendarTodayOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
             <Item
-              title="Geography Chart"
-              to="/geography"
-              icon={<MapOutlinedIcon />}
+              title="FAQ Page"
+              to="/faq"
+              icon={<HelpOutlineOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
-            /> */}
-          
+            /> 
+
+            
+            </Box>
+          )     }
         </Menu>
+    
       </ProSidebar>
       </Box>
     </Box>
+  
   );
 };
 
