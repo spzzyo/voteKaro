@@ -18,7 +18,11 @@ import VoteAction from "./scenes/vote";
 
 function SidebarWrapper() {
   const location = useLocation();
+<<<<<<< HEAD
   const isSidebar = location.pathname !== '/signup' && location.pathname !== '/signin' && location.pathname !== '/' && location.pathname !== '/signup/';
+=======
+  const isSidebar = location.pathname !== '/signup' && location.pathname !== '/signin' && location.pathname !== '/';
+>>>>>>> a138a587607993d521d2352d6b205fed087bf018
 
   return isSidebar ? <Sidebar /> : null;
 }
