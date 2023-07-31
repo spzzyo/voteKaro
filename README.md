@@ -1,7 +1,6 @@
 Description:
-A Voting System that ensures
-
-
+A Voting System that ensures safe casting of votes for a Student Council Election.
+Tech Stack: React, Django, Django RestFramework, Celery, Redis. 
 
 
 
