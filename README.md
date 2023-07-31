@@ -5,52 +5,56 @@ Tech Stack: React, Django, Django RestFramework, Celery, Redis.
 
 
 Signin/Signup
+<img width="960" alt="Screenshot 2023-07-31 160018" src="https://github.com/spzzyo/voteKaro/assets/132225926/014988fe-0b94-4471-843e-1410de0df7a2">
 
-<img width="960" alt="Screenshot 2023-07-31 160008" src="https://github.com/spzzyo/voteKaro/assets/132225926/66a64c81-a32f-43cb-be45-e5973c7ab1ec">
-<img width="960" alt="Screenshot 2023-07-31 160018" src="https://github.com/spzzyo/voteKaro/assets/132225926/1af1911d-81f5-4753-b6fa-ad32cefe118d">
+<img width="960" alt="Screenshot 2023-07-31 160008" src="https://github.com/spzzyo/voteKaro/assets/132225926/7234f9ad-2861-4215-8287-ebcc87fe7f94">
+
 
 Student Dashboard:
-<img width="960" alt="Screenshot 2023-07-31 155951" src="https://github.com/spzzyo/voteKaro/assets/132225926/ae578eaf-7c75-412e-bef7-63cddc207430">
+<img width="960" alt="Screenshot 2023-07-31 155951" src="https://github.com/spzzyo/voteKaro/assets/132225926/db4ba200-de30-4565-8049-6dac3fa473fc">
+
 
 Student can apply for a position:
-<img width="960" alt="Screenshot 2023-07-31 160231" src="https://github.com/spzzyo/voteKaro/assets/132225926/39c941ed-8ea9-4528-9f0e-efd12e5c2c21">
-<img width="960" alt="Screenshot 2023-07-31 160346" src="https://github.com/spzzyo/voteKaro/assets/132225926/e6780a42-ac3e-4b63-89e6-5119ac7e7a7b">
+<img width="960" alt="Screenshot 2023-07-31 160231" src="https://github.com/spzzyo/voteKaro/assets/132225926/5db46653-9f9f-4688-9817-2ae123ff364c">
+<img width="960" alt="Screenshot 2023-07-31 160346" src="https://github.com/spzzyo/voteKaro/assets/132225926/8f24b9a9-855f-4ff3-920e-aab5090ff00b">
+
 
 Student can Vote once voting phase is active:
 
-<img width="960" alt="image" src="https://github.com/spzzyo/voteKaro/assets/132225926/04ea1860-bde2-4658-8a55-99517bf0ca7b">
+<img width="960" alt="Screenshot 2023-07-31 170645" src="https://github.com/spzzyo/voteKaro/assets/132225926/e1ecfe1a-5da5-40be-bd0e-bbd4bc6c65ee">
+
+<img width="960" alt="Screenshot 2023-07-31 160436" src="https://github.com/spzzyo/voteKaro/assets/132225926/71b83936-15ef-4599-a7e5-cc25b01211dd">
+
+<img width="960" alt="Screenshot 2023-07-31 160454" src="https://github.com/spzzyo/voteKaro/assets/132225926/2f3703ff-75f2-4277-86b7-271434e3fb88">
 
 
-<img width="960" alt="Screenshot 2023-07-31 160436" src="https://github.com/spzzyo/voteKaro/assets/132225926/622a400d-5e35-4d2e-aaf8-d87ecbe19712">
-
-
-<img width="960" alt="Screenshot 2023-07-31 160454" src="https://github.com/spzzyo/voteKaro/assets/132225926/104957d5-d03a-401a-8ce7-aac85e18d885">
 
 Storing a Vote in encrypted form (DjangoAdmin):
 
-<img width="960" alt="Screenshot 2023-07-31 160555" src="https://github.com/spzzyo/voteKaro/assets/132225926/96ebbb73-9cac-490a-9bdb-70be5712664f">
+<img width="960" alt="Screenshot 2023-07-31 160555" src="https://github.com/spzzyo/voteKaro/assets/132225926/99fe9af2-6361-455e-b106-df855b86c545">
+
 
 Keeping track if student has voted in category or not (DjangoAdmin).
+<img width="960" alt="Screenshot 2023-07-31 160534" src="https://github.com/spzzyo/voteKaro/assets/132225926/731062da-9b12-426b-8e10-d93547b3dcf6">
 
-<img width="960" alt="Screenshot 2023-07-31 160534" src="https://github.com/spzzyo/voteKaro/assets/132225926/a8c64cfe-5146-49f3-a520-926cf2ae1a47">
-<img width="960" alt="Screenshot 2023-07-31 160508" src="https://github.com/spzzyo/voteKaro/assets/132225926/bf308664-2238-4057-a776-614ece6f1a5b">
-
+<img width="960" alt="Screenshot 2023-07-31 160508" src="https://github.com/spzzyo/voteKaro/assets/132225926/7180ecf5-b710-4b71-870f-54d002a6aeb7">
 
 
 #Admin Dashboard:
 
 List of applied Candidates:
 
-<img width="960" alt="Screenshot 2023-07-31 155920" src="https://github.com/spzzyo/voteKaro/assets/132225926/48723fca-8ba5-40cc-ab5c-95b1324afd87">
+<img width="960" alt="Screenshot 2023-07-31 155920" src="https://github.com/spzzyo/voteKaro/assets/132225926/c46ed0e2-732f-49a2-85d8-8e9297950f4c">
+
 
 Result Display:
 
-<img width="960" alt="Screenshot 2023-07-31 155903" src="https://github.com/spzzyo/voteKaro/assets/132225926/1d1e579a-8ab8-40b0-9ee4-d7875122af40">
+<img width="960" alt="Screenshot 2023-07-31 155903" src="https://github.com/spzzyo/voteKaro/assets/132225926/34b25118-e3c9-42c9-a5c8-a90431a57ff8">
 
 Charts:
 
-<img width="960" alt="Screenshot 2023-07-31 155837" src="https://github.com/spzzyo/voteKaro/assets/132225926/df674775-94b6-48c6-9252-7da3ce26d347">
-<img width="960" alt="Screenshot 2023-07-31 155852" src="https://github.com/spzzyo/voteKaro/assets/132225926/f5b6498f-6f2f-4c44-ac4c-f38344f3519b">
+<img width="960" alt="Screenshot 2023-07-31 155837" src="https://github.com/spzzyo/voteKaro/assets/132225926/d7726f74-1961-4678-91be-c2e20ec8a0c6">
 
+<img width="960" alt="Screenshot 2023-07-31 155852" src="https://github.com/spzzyo/voteKaro/assets/132225926/8681d1a8-3473-4148-b2ab-19d575533e58">
 
 
