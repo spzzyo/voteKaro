@@ -20,26 +20,7 @@ const Dashboard = () => {
       
     }
   }, []);
-  // const [studentData, setStudent] = useState([]);
-  // useEffect(() => {
-  //   const fetchStudent = async () => {
-  //     if (userId) { // Check if userId is not null
-  //       try {
-  //         const response = await fetch(`http://127.0.0.1:8000/view/view_api/user/${userId}/?format=json`); 
-  //         const data = await response.json();
-  //         const { phone_number } = data; // Extract the phone_number key
-  //         setStudent(phone_number);
-  //         console.log(phone_number);
-  //       } catch (error) {
-  //         console.error(error);
-  //       }
-  //     }
-  //   };
-
-  //   fetchStudent();
-  // }, [userId]) //Also update the authcontext file;
-
-  // ...
+ 
 
   
   return (
@@ -51,7 +32,7 @@ const Dashboard = () => {
       {/* HEADER */}
       <Box display="flex" justifyContent="space-between" alignItems="center">
         <Header title="DASHBOARD" subtitle="Welcome to Admin Dashboard" />
-        <div>User ID: {userId}</div>
+        
         
        <Box>
           <Button

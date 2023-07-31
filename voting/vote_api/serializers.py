@@ -14,6 +14,8 @@ class VoteSerializer(serializers.ModelSerializer):
         model = Vote
         fields = ('user_id', 'category_id', 'candidate_id')
 
+        
+
     def create(self, validated_data):
         # Encrypt the candidate_id before saving to the database
         candidate_id = validated_data['candidate_id']
@@ -26,4 +28,8 @@ class VoteSerializer(serializers.ModelSerializer):
         return vote
     
 
+
+class CandidateVoteSerializer(serializers.Serializer):
+    candidate_name = serializers.CharField()
+    vote_count = serializers.IntegerField()
     

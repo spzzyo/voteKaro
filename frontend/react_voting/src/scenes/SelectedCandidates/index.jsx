@@ -5,37 +5,7 @@ import Header from "../../components/Header";
 import { useTheme } from "@mui/material";
 import React, {useEffect, useState} from "react";
 
-// const StudentList = () => {
-//   const [students, setStudents] = useState([]);
 
-//   useEffect(() => {
-//     const fetchStudents = async () => {
-//       try {
-//         const response = await fetch('http://127.0.0.1:8000/view/view_api/students/');
-//         const data = await response.json();
-//         console.log(data);
-//         setStudents(data);
-//       } catch (error) {
-//         console.error(error);
-//       }
-//     };
-
-//     fetchStudents();
-//   }, []);
-
-//   return (
-//     <div>
-//       <h1>Student List</h1>
-//       <ul>
-//         {students.map((student) => (
-//           <li key={student.id}>{student.name}</li>
-//         ))}
-//       </ul>
-//     </div>
-//   );
-// };
-
-// export default StudentList;
 
 
 const SelectedCandidates = () => {

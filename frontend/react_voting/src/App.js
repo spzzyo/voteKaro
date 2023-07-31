@@ -14,15 +14,19 @@ import SelectedCandidates from "./scenes/SelectedCandidates";
 import AppliedCandidates from "./scenes/AppliedCandidates";
 import FormDialog from "./scenes/candidate_form";
 import VoteAction from "./scenes/vote";
+import Result from "./scenes/Results";
+import GSGoogleChart from "./scenes/BarChart/gensec";
+import FSGoogleChart from "./scenes/BarChart/financesec";
+import SSGoogleChart from "./scenes/BarChart/sportssec";
+import GGooglePieChart from "./scenes/PieChart/gensec";
+import FGooglePieChart from "./scenes/PieChart/financesec";
+import SGooglePieChart from "./scenes/PieChart/sportssec";
 
 
 function SidebarWrapper() {
   const location = useLocation();
-<<<<<<< HEAD
   const isSidebar = location.pathname !== '/signup' && location.pathname !== '/signin' && location.pathname !== '/' && location.pathname !== '/signup/';
-=======
-  const isSidebar = location.pathname !== '/signup' && location.pathname !== '/signin' && location.pathname !== '/';
->>>>>>> a138a587607993d521d2352d6b205fed087bf018
+  
 
   return isSidebar ? <Sidebar /> : null;
 }
@@ -55,7 +59,13 @@ function App() {
               <Route path="/signup" element={<SignUpPage />}  />
               <Route path="/details" element={<FormDialog />}  />
               <Route path="/vote" element={<VoteAction/>} />
-              
+              <Route path="/results" element={<Result/>} />
+              <Route path="/bargraphgs" element={<GSGoogleChart/>} />
+              <Route path="/bargraphfs" element={<FSGoogleChart/>} />
+              <Route path="/bargraphss" element={<SSGoogleChart/>} />
+              <Route path="/piegraphgs" element={<GGooglePieChart/>}  />
+              <Route path="/piegraphfs" element={<FGooglePieChart/>}  />
+              <Route path="/piegraphss" element={<SGooglePieChart/>}  />
 
               
             </Routes>

@@ -63,6 +63,8 @@ class Vote(models.Model):
     class Meta:
         unique_together = ('user_id', 'category_id')
     
+    def __str__(self):
+        return self.category_id
     
 class StudentVotes(models.Model):
     student_id = models.IntegerField(unique=True,primary_key=True) 

@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
-import { ProSidebar, Menu, MenuItem } from "react-pro-sidebar";
-import { Box, IconButton, Typography, useTheme } from "@mui/material";
+import { ProSidebar, Menu, MenuItem, SubMenu } from "react-pro-sidebar";
+import { Box, IconButton, Typography, useTheme, Select, FormControl } from "@mui/material";
 import { Link } from "react-router-dom";
 import "react-pro-sidebar/dist/css/styles.css";
 import { tokens } from "../../theme";
@@ -44,7 +44,9 @@ const Sidebar = () => {
   const colors = tokens(theme.palette.mode);
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [selected, setSelected] = useState("Dashboard");
-  const [userId, setUserId] = useState(null);
+  const [userId, setUserId] = useState(null);  
+  
+  const [selectedCategory, setSelectedCategory] = useState('GENSEC');
 
   useEffect(() => {
     const storedUserId = localStorage.getItem('userId');
@@ -173,8 +175,8 @@ const Sidebar = () => {
               Pages
             </Typography>
             <Item
-              title="Apply for a Position"
-              to="/hi"
+              title="Display Results"
+              to="/results"
               icon={<PersonOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
@@ -197,24 +199,31 @@ const Sidebar = () => {
             <Typography
               variant="h6"
               color={colors.grey[300]}
-              sx={{ m: "15px 0 5px 20px" }}
+              sx={{ m: '15px 0 5px 20px' }}
             >
               Charts
             </Typography>
-            <Item
+            <SubMenu
               title="Bar Chart"
-              to="/bar"
               icon={<BarChartOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
-            />
-            <Item
+            >
+            <Item icon = {<PeopleOutlinedIcon /> } to="/bargraphgs" title = "GENERAL SEC." selected={selected} setSelected={setSelected} ></Item>
+            <Item icon={<PeopleOutlinedIcon />} to="/bargraphfs"title="FINANCE SEC." selected={selected} setSelected={setSelected}></Item>
+            <Item icon={<PeopleOutlinedIcon />}to="/bargraphss" title="SPORTS SEC." selected={selected} setSelected={setSelected}></Item>
+            </SubMenu>
+            <SubMenu 
               title="Pie Chart"
-              to="/pie"
               icon={<PieChartOutlineOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
-            />
+            >
+            <Item icon = {<PeopleOutlinedIcon /> } to="/piegraphgs" title = "GENERAL SEC." selected={selected} setSelected={setSelected} ></Item>
+            <Item icon={<PeopleOutlinedIcon />} to="/piegraphfs"title="FINANCE SEC." selected={selected} setSelected={setSelected}></Item>
+            <Item icon={<PeopleOutlinedIcon />}to="/piegraphss" title="SPORTS SEC." selected={selected} setSelected={setSelected}></Item>
+            </SubMenu>
+
             </Box>
           ):(
             <Box Box paddingLeft={isCollapsed ? undefined : "5%"}>
